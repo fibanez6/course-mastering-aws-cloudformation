@@ -1,0 +1,39 @@
+Resources:
+  SourceDB:
+    Type: "AWS::RDS::DBInstance"
+    Properties:
+      Engine: mysql
+      DBInstanceClass: db.t3.micro
+      DBName: demo
+      MasterUsername: admin
+      MasterUserPassword: test1234
+      DBSubnetGroupName: default-vpc-0a19622ed9dc22596
+      MultiAZ: false
+      PubliclyAccessible: true
+
+  TargetDB:
+    Type: "AWS::RDS::DBInstance"
+    Properties:
+      Engine: <target_engine>
+      DBInstanceClass: <target_instance_class>
+      DBName: <target_database_name>
+      MasterUsername: <target_master_username>
+      MasterUserPassword: <target_master_password>
+      DBSubnetGroupName: <target_subnet_group_name>
+      MultiAZ: false
+      PubliclyAccessible: true
+
+  DatabaseMigrationTask:
+    Type: "AWS::DMS::ReplicationTask"
+    Properties:
+      ReplicationTaskIdentifier: <replication_task_identifier>
+      SourceEndpointArn: !GetAtt SourceDB.Endpoint.Address
+      TargetEndpointArn: !GetAtt TargetDB.Endpoint.Address
+      MigrationType: full-load-and-cdc
+      TableMappings:
+        - <table_mappings>
+      ReplicationTaskSettings:
+        Logging: [debug]
+      Tags:
+        - Key: <tag_key>
+          Value: <tag_value>

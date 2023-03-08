@@ -69,3 +69,4 @@ Outputs:
     Value: !GetAtt ProxyEntryLambdaFunction.Arn
     Export:
       Name: stack-proxy-proxyentry-lambda-arn
+      
