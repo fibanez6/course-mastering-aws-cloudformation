@@ -1,0 +1,10 @@
+{
+  "ServiceAccessRoleArn": "arn:aws:iam::787298256381:role/s3role",
+  "CsvRowDelimiter": "\\n",
+  "CsvDelimiter": ",",
+  "BucketFolder": "data",
+  "BucketName": "mybucket4rdsmigration",
+  "CompressionType": "NONE",
+  "EnableStatistics": true,
+  "DatePartitionEnabled": false
+}
