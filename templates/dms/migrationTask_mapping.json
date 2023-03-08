@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "rule-type": "selection",
+      "rule-id": "253515591",
+      "rule-name": "253515591",
+      "object-locator": {
+        "schema-name": "%",
+        "table-name": "%"
+      },
+      "rule-action": "include",
+      "filters": []
+    }
+  ]
+}

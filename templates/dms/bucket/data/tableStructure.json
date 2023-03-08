@@ -1,0 +1,79 @@
+{
+  "TableCount": "2",
+  "Tables": [
+    {
+      "TableName": "authors",
+      "TablePath": "demo/authors/",
+      "TableOwner": "demo",
+      "TableColumns": [
+        {
+          "ColumnName": "id",
+          "ColumnType": "INT8",
+          "ColumnNullable": "false",
+          "ColumnIsPk": "true"
+        },
+        {
+          "ColumnName": "first_name",
+          "ColumnType": "STRING",
+          "ColumnLength": "20"
+        },
+        {
+          "ColumnName": "last_name",
+          "ColumnType": "STRING",
+          "ColumnLength": "30"
+        },
+        {
+          "ColumnName": "birthdate",
+          "ColumnType": "DATETIME"
+        },
+        {
+          "ColumnName": "added",
+          "ColumnType": "DATETIME"
+        },
+        {
+          "ColumnName": "email",
+          "ColumnType": "STRING",
+          "ColumnLength": "20"
+        }
+      ],
+      "TableColumnsTotal": "6"
+    },
+    {
+      "TableName": "posts",
+      "TablePath": "demo/posts/",
+      "TableOwner": "demo",
+      "TableColumns": [
+        {
+          "ColumnName": "id",
+          "ColumnType": "INT8",
+          "ColumnNullable": "false",
+          "ColumnIsPk": "true"
+        },
+        {
+          "ColumnName": "author_id",
+          "ColumnType": "INT8"
+        },
+        {
+          "ColumnName": "title",
+          "ColumnType": "STRING",
+          "ColumnLength": "255"
+        },
+        {
+          "ColumnName": "content",
+          "ColumnType": "STRING",
+          "ColumnLength": "255"
+        },
+        {
+          "ColumnName": "date",
+          "ColumnType": "DATETIME"
+        },
+        {
+          "ColumnName": "description",
+          "ColumnType": "STRING",
+          "ColumnLength": "500"
+        }
+      ],
+      "TableColumnsTotal": "6"
+    }
+  ]
+}
