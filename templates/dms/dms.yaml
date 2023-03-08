@@ -4,7 +4,7 @@ Resources:
     Properties:
       Engine: mysql
       DBInstanceClass: db.t3.micro
-      DBName: demo
+      DBName: source
       MasterUsername: admin
       MasterUserPassword: test1234
       DBSubnetGroupName: default-vpc-0a19622ed9dc22596
@@ -14,12 +14,12 @@ Resources:
   TargetDB:
     Type: "AWS::RDS::DBInstance"
     Properties:
-      Engine: <target_engine>
-      DBInstanceClass: <target_instance_class>
-      DBName: <target_database_name>
-      MasterUsername: <target_master_username>
-      MasterUserPassword: <target_master_password>
-      DBSubnetGroupName: <target_subnet_group_name>
+      Engine: mysql
+      DBInstanceClass: db.t3.micro
+      DBName: target
+      MasterUsername: admin
+      MasterUserPassword: test1234
+      DBSubnetGroupName: default-vpc-0a19622ed9dc22596
       MultiAZ: false
       PubliclyAccessible: true
 

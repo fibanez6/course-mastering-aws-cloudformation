@@ -76,3 +76,5 @@ build/
 # ignore secrets
 secrets.yaml
 secrets.json
+templates/.DS_Store
+templates/dms/.DS_Store
